@@ -35,22 +35,34 @@ h6 {
   padding: 20px 50px;
   background-color: #e3e6f3;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
-  position: sticky;
+  position:sticky;
   top: 0;
   z-index: 999;
   left: 0;
 }
-#nav-bar {
+#nav-bar{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#nav-bar li {
+#nav-bar-2{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav-bar-2 > * {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#nav-bar li,#nav-bar-2 li {
   list-style: none;
   position: relative;
   padding: 0 25px;
 }
-#nav-bar li a {
+#nav-bar li a,#nav-bar-2 li a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
@@ -58,13 +70,13 @@ h6 {
   opacity: 0.7;
 }
 
-#nav-bar li a:hover {
+#nav-bar li a:hover,#nav-bar-2 li a:hover{
   opacity: 1;
   font-size: 18.5px;
   transition: 0.2s ease;
 }
 
-#nav-bar li a:hover::after {
+#nav-bar li a:hover::after , #nav-bar-2 li a:hover::after {
   opacity: 1;
   font-size: 18.5px;
   transition: 0.2s ease;
@@ -575,6 +587,7 @@ h6 {
   backdrop-filter: blur(10px); 
   z-index: 999;
   transition: right 0.5s;
+  display: none;
   
 }
 html.no-scroll,
@@ -585,6 +598,9 @@ body.no-scroll {
 /* media query  */
 
 @media (320px <= width <=480px){ 
+  #side-come{
+    display: block;
+  }
     #header{
       height: auto;
       padding: 10px 25px;
